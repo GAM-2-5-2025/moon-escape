@@ -7,18 +7,9 @@ SCREEN_HEIGHT=900
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Moon escape")
 
-# Game loop
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    # Fill the screen with a color
-    screen.fill((255, 255, 255))  # This fills the screen with blue
-    pygame.display.update()
-
-pygame.quit()
+# Fill the screen with a color
+screen.fill((255, 255, 255))  # This fills the screen with blue
+pygame.display.update()
 
 
 # Player settings
@@ -47,3 +38,11 @@ class Player(pygame.sprite.Sprite):
         self.surf = pygame.Surface((75, 25))
         self.surf.fill((0, 0, 0))
         self.rect = self.surf.get_rect()
+# Game loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+pygame.quit()
